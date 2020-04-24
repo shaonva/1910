@@ -39,10 +39,10 @@
       <div class="clearfix"></div>
      </ul><!--pronav/-->
      <div class="index-pro1">
-     @foreach($goodsList as $v)	
+     @foreach($best as $v)	
      <div class="index-pro1-list">
        <dl>
-        <dt><a href="{{url('/prolist/'.$v->goods_id)}}"><img src="{{env('UPLOADS_URLL')}}{{$v->goods_img}}" /></a></dt>
+        <dt><a href="{{url('/prolist/'.$v->goods_id)}}"><img src="{{env('UPLOADS_URLL')}}{{$v->goods_img}}"/></a></dt>
         <dd class="ip-text"><a href="proinfo.html">{{$v->goods_name}}</a><span>已售：488</span></dd>
         <dd class="ip-price"><strong>¥{{$v->goods_price}}</strong> <span>¥{{$v->goods_price}}</span></dd>
        </dl>

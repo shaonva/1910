@@ -37,7 +37,9 @@ class IndexController extends Controller
     	 
 		//$slide = unserialize($slide); 
     	//dd($slide);
-    	$goodsList = Goods::all();
-    	return view('index.index',['slide'=>$slide,'goodsList'=>$goodsList]); 
+     	//首页精品数据
+    	$best = Goods::select('goods_id','goods_img','goods_price','goods_name')->where('is_best',1)->take(8)->get();
+    	//dd($best);
+    	return view('index.index',['slide'=>$slide,'best'=>$best]); 
     }   
 }
