@@ -19,6 +19,7 @@ class GoodsController extends Controller
      */
     public function index()
     {
+    	echo 612;
     	$cate_id = request()->cate_id;
     	$where = [];
     	if($cate_id){
